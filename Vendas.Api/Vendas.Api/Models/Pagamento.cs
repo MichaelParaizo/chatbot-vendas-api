@@ -1,4 +1,6 @@
-﻿namespace Vendas.Api.Models
+﻿using Vendas.Api.Models.Enums;
+
+namespace Vendas.Api.Models
 {
     public class Pagamento
     {
@@ -7,6 +9,6 @@
         public DateTime DataPagamento { get; set; }
         public bool Pago { get; set; }
 
-        public ICollection<Pedido> Pedidos { get; set; }
+       
     }
 }

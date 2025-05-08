@@ -3,7 +3,7 @@
     public class Produto
     {
         public int Id { get; set; }
-        public string Titulo { get; set; }
-        public string Descricao { get; set; }
+        public string Titulo { get; set; } = default!;
+        public string Descricao { get; set; } = default!;
     }
 }

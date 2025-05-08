@@ -2,6 +2,11 @@
 {
     public class Adicional
     {
+
+        public Adicional()
+        {
+            
+        }
         public int Id { get; set; }
         public string Titulo { get; set; } = default!;
         public string Tipo { get; set; }=default!; // Ex: "Borda", "Ingrediente extra"
