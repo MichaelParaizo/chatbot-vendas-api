@@ -13,7 +13,7 @@ namespace Vendas.Api.Models
             builder.Property(x => x.ClienteId).IsRequired().HasMaxLength(20).HasColumnName("clienteId");
             builder.Property(x => x.Observacao).IsRequired().HasMaxLength(100).HasColumnName("observacao");
             builder.Property(x => x.Total).IsRequired().HasColumnType("numeric").HasColumnName("total");
-            builder.Property(x => x.PagamentoId).IsRequired().HasColumnType("numeric").HasColumnName("pagamentoId");
+            builder.Property(x => x.PagamentoId).IsRequired().HasColumnName("pagamentoId");
             builder.HasMany(x => x.Itens)
                 .WithOne(x => x.Pedido)
                 .HasForeignKey(x => x.PedidoId);

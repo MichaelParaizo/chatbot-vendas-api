@@ -10,9 +10,9 @@ namespace Vendas.Api.Models
 
             builder.ToTable("pedidoItem");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.PedidoId).IsRequired().HasColumnType("numeric").HasColumnName("pedidoId");
-            builder.Property(x => x.ProdutoId).IsRequired().HasColumnType("numeric").HasColumnName("produtoId");
-            builder.Property(x => x.TamanhoId).IsRequired().HasColumnType("numeric").HasColumnName("tamanhoId");
+            builder.Property(x => x.PedidoId).IsRequired().HasColumnName("pedidoId");
+            builder.Property(x => x.ProdutoId).IsRequired().HasColumnName("produtoId");
+            builder.Property(x => x.TamanhoId).IsRequired().HasColumnName("tamanhoId");
             builder.Property(x => x.Observacao).IsRequired().HasMaxLength(100).HasColumnName("observacao");
             builder.HasOne(x => x.Produto).WithMany().HasForeignKey(x => x.ProdutoId);
             builder.HasOne(x => x.Tamanho).WithMany().HasForeignKey(x => x.TamanhoId);

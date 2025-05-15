@@ -1,8 +1,10 @@
-﻿namespace Vendas.Api.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Vendas.Api.Models
 {
     public class Pedido
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; } = default!;

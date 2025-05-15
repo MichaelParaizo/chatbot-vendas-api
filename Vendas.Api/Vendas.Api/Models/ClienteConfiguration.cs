@@ -12,7 +12,7 @@ namespace Vendas.Api.Models
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome).IsRequired().HasMaxLength(50).HasColumnName("nome");
             builder.Property(x => x.Endereco).IsRequired().HasMaxLength(100).HasColumnName("endereco");
-            builder.Property(x => x.Telefone).IsRequired().HasColumnType("numeric").HasColumnName("telefone");
+            builder.Property(x => x.Telefone).IsRequired().HasMaxLength(20).HasColumnName("telefone");
 
 
         }
